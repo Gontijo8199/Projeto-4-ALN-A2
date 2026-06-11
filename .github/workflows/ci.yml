@@ -1,0 +1,38 @@
+name: Verificar notebooks
+
+on: [push]
+
+jobs:
+  executar-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.12'
+
+      - name: Instalar jupyter
+        run: pip install jupyter nbconvert
+
+      - name: Instalar dependências Julia
+        run: julia -e 'using Pkg; Pkg.add(["IJulia", "LinearAlgebra", "Plots"])'
+
+      - name: Registrar kernel Julia
+        run: julia -e 'using IJulia; IJulia.installkernel("Julia")'
+
+      - name: Executar questao_1.ipynb
+        run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia questao_1.ipynb
+
+      - name: Executar questao_2.ipynb
+        run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia questao_2.ipynb
+
+      - name: Executar questao_3.ipynb
+        run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia questao_3.ipynb
+
+      - name: Salvar notebooks executados
+        uses: actions/upload-artifact@v4
+        with:
+          name: notebooks-executados
+          path: "*.ipynb"

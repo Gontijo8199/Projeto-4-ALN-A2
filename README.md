@@ -1,8 +1,5 @@
 # Projeto 4: Álgebra Linear Numérica
 
-![CI](https://github.com/SEU_USUARIO/projeto4-aln/actions/workflows/ci.yml/badge.svg)
-
-
 Repositório com as resoluções do Projeto 4 da disciplina de Álgebra Linear Numérica (2026/1) da FGV-EMAp. O trabalho investiga refletores de Householder, redução à forma de Hessenberg e exponenciais de matrizes, com ênfase em estabilidade numérica e condicionamento.
 
 ## Autores
