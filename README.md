@@ -1,6 +1,6 @@
 # Projeto 4: Álgebra Linear Numérica
 
-![CI](https://github.com/Gontijo8199/Projeto-4-ALN-A2/actions/workflows/ci.yml/badge.svg)
+## Descrição 
 
 Repositório com as resoluções do Projeto 4 da disciplina de Álgebra Linear Numérica (2026/1) da FGV-EMAp. O trabalho investiga refletores de Householder, redução à forma de Hessenberg e exponenciais de matrizes, com ênfase em estabilidade numérica e condicionamento.
 
@@ -19,4 +19,14 @@ Repositório com as resoluções do Projeto 4 da disciplina de Álgebra Linear N
 
 - [Numerical Linear Algebra - Trefethen & Bau](https://epubs.siam.org/doi/book/10.1137/1.9780898719574)
 - [Documentação Julia: LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
+
+## Fluxo CI/CD
+
+![CI](https://github.com/Gontijo8199/Projeto-4-ALN-A2/actions/workflows/ci.yml/badge.svg)
+![Release](https://github.com/Gontijo8199/Projeto-4-ALN-A2/actions/workflows/release.yml/badge.svg)
+
+Este projeto utiliza um pipeline de CI/CD configurado no GitHub Actions para:
+
+1. Integração Contínua: Validação automática da execução dos notebooks a cada push.
+2. Entrega Contínua: Geração automática de relatórios em HTML via Releases (disponíveis na aba [Releases](https://github.com/Gontijo8199/Projeto-4-ALN-A2/releases)).
 
