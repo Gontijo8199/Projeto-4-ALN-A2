@@ -1,0 +1,28 @@
+name: Publicar Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publicar-trabalho:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Instalar ferramentas de conversão
+        run: pip install jupyter nbconvert
+
+      - name: Converter notebooks para HTML
+        run: |
+          jupyter nbconvert --to html questao_1.ipynb --output questao_1.html
+          jupyter nbconvert --to html questao_2.ipynb --output questao_2.html
+          jupyter nbconvert --to html questao_3.ipynb --output questao_3.html
+
+      - name: Anexar arquivos à Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            questao_1.html
+            questao_2.html
+            questao_3.html
