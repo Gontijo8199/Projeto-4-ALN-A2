@@ -13,7 +13,7 @@ jobs:
         with:
           version: '1.12'
 
-      - name: Instalar jupyter
+      - name: Instalar jupyter e nbconvert
         run: pip install jupyter nbconvert
 
       - name: Instalar dependências Julia
@@ -22,17 +22,17 @@ jobs:
       - name: Registrar kernel Julia
         run: julia -e 'using IJulia; IJulia.installkernel("julia")'
 
-      - name: Listar kernels disponíveis
-        run: jupyter kernelspec list
+      - name: Instalar dependências Python
+        run: pip install numpy matplotlib scipy ipykernel
 
-      - name: Executar questao_1.ipynb
+      - name: Executar questao_1.ipynb (Julia)
         run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia-1.12 questao_1.ipynb
 
-      - name: Executar questao_2.ipynb
+      - name: Executar questao_2.ipynb (Julia)
         run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia-1.12 questao_2.ipynb
 
-      - name: Executar questao_3.ipynb
-        run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=julia-1.12 questao_3.ipynb
+      - name: Executar questao_3.ipynb (Python)
+        run: jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=python3 questao_3.ipynb
 
       - name: Salvar notebooks executados
         uses: actions/upload-artifact@v4
