@@ -15,11 +15,6 @@ Repositório com as resoluções do Projeto 4 da disciplina de Álgebra Linear N
 * **Questão 2 - Forma de Hessenberg**: Aplicação de refletores a vetores e matrizes e implementação da redução de Hessenberg via produto de refletores.
 * **Questão 3 - Exponenciais de Matrizes**: Análise espectral, decomposição SVD e derivação de fórmula fechada para a exponencial de uma família de matrizes.
 
-## Referências Consultadas
-
-- [Numerical Linear Algebra - Trefethen & Bau](https://epubs.siam.org/doi/book/10.1137/1.9780898719574)
-- [Documentação Julia: LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
-
 ## Fluxo CI/CD
 
 ![CI](https://github.com/Gontijo8199/Projeto-4-ALN-A2/actions/workflows/ci.yml/badge.svg)
@@ -30,3 +25,20 @@ Este projeto utiliza um pipeline de CI/CD configurado no GitHub Actions para:
 1. Integração Contínua: Validação automática da execução dos notebooks a cada push.
 2. Entrega Contínua: Geração automática de relatórios em HTML via Releases (disponíveis na aba [Releases](https://github.com/Gontijo8199/Projeto-4-ALN-A2/releases)).
 
+## Referências Consultadas
+
+- [Numerical Linear Algebra - Trefethen & Bau](https://epubs.siam.org/doi/book/10.1137/1.9780898719574)
+- [Documentação Julia: LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)
+
+
+
+<pre> 
+ __________________________________
+< eu S2 refletores de Householder! >
+ ----------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+</pre>
